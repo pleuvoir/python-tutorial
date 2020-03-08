@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# !/usr/bin/env python3
-
-# -*- coding: utf-8 -*-
-
 
 # 多参数，不能指定关键字，类似元组
 def mutil_args(*args):
