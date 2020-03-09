@@ -10,7 +10,7 @@ class User(object):
         print('这是最普通的实例方法', self.name)
 
     @classmethod
-    def class_function(cls):
+    def class_function(cls):  # 其实就是有个cls的入参
         print('这是一个类方法')
         cls.static_method()
 

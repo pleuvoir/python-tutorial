@@ -78,9 +78,33 @@ print(join_split)  # ['1', '2', '3']
 # 格式化字符串的几种方式
 print('i come from {}, and my age is {}'.format('china', 18))  # 这种的就像输入日志一样
 print('i come from {1}, and my age is {0}'.format(18, 'china'))  # 可以绑定位置，注意，一定要从0开始，后面的实际值索引和括号内对应
+print('i come from {0:>10}, and my age is {1:<5}'.format('china', 18))  # 这个可以调整位置，请自己尝试
 
-china = 'china'
-age = 18
-print(f'i come from {china}, and my age is {age}')  # 这种的好处显而易见，可以传入值
+for i in range(1, 3):
+    print("{0}的平方={1}，{0}的立方={2}".format(i, i ** 2, i ** 3))
 
-print(f"i come from {'china'}, and my age is {18}")  # 这样也可以，因为里面要用字符串所以改成了双引号开头
+# 文本  a，文本b
+string1 = "hello "
+string2 = "world! "
+string3 = "pleuvoir"
+
+print(string1 + string2)
+print(len(string1 + string2))  # 13
+print("hello " "world! ")
+print(len("hello " "world! "))  # 13
+
+print("he" in string1)  # True
+print(" " in string1)  # True
+print("" in string3)  # 永远是True
+print(string1 * 5)  # 打印5次
+
+# 一些常用的函数
+game = "ABc_Def呵呵ß"  # 最后一个是德语
+print(game.capitalize())  # Abc_def呵呵ß
+print(game.upper())  # ABC_DEF呵呵SS
+print(game.lower())  # 不能正确转换德语为小写，所以用下面的就妥了
+print(game.casefold())  # 最后一个是德语 小写为ss
+# 把前面或者结尾的干掉，注意：部分也可以不一定是连续的才起作用
+text = 'abcdEFa'
+print(text.strip('ac'))  # bcdEF
+print(text.strip('fab'))  # cdEF
