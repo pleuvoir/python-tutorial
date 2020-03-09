@@ -6,8 +6,14 @@ import os
 # 获取当前的路径
 print(os.getcwd())  # /Users/pleuvoir/dev/space/git/python-tutorial/08_输入输出和文件
 
+# 获取绝对路径
+print(os.path.abspath('.'))  # 和上面结果一样
+
 # 获取当前文件夹下的文件
 print(os.listdir())  # ['os_文件路径操作.py', 'write_写文件.py', 'readme.md', 'readme.txt', 'read_读文件.py']
+
+# 拆分目录和文件名
+print(os.path.splitext('read_读文件.py'))  # 返回tuple ('read_读文件', '.py')
 
 # 如果没有folder文件夹则创建文件夹
 if not os.path.exists('folder'):

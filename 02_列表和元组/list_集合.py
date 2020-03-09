@@ -28,3 +28,14 @@ print(language_all)  # ['java', 'python']
 """在指定位置插入"""
 language_all.insert(1, 'c++')
 print(language_all)  # ['java', 'c++', 'python']
+
+"""列表解析"""
+
+list_old = [1, 2, 3, 4]  # 想要 [2,3,4,5]，普通方法是遍历，快速方法可以使用列表解析
+
+list_new = [item + 1 for item in list_old]
+print('list_new', list_new)  # [2, 3, 4, 5]
+
+# 同时还可以做过滤
+list_new = [item + 1 for item in list_old if item % 2 == 0]
+print(list_new)  # [3, 5]  先执行右边的过滤，然后再执行左边的格式化+1
