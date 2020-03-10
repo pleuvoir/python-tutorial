@@ -1,0 +1,6 @@
+
+cd /Users/pleuvoir/dev/space/git/python-tutorial
+
+source venv/bin/activate
+
+这样就进入到了虚拟环境可以通过 pip list查看安装的Module

@@ -9,6 +9,9 @@ print(os.getcwd())  # /Users/pleuvoir/dev/space/git/python-tutorial/08_输入输
 # 获取绝对路径
 print(os.path.abspath('.'))  # 和上面结果一样
 
+# 获取当前文件所在的文件夹
+print(os.path.dirname(__file__)) #和上面结果一样，如果在终端中运行可能获取不到结果，不推荐使用
+
 # 获取当前文件夹下的文件
 print(os.listdir())  # ['os_文件路径操作.py', 'write_写文件.py', 'readme.md', 'readme.txt', 'read_读文件.py']
 
