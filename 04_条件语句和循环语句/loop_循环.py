@@ -11,6 +11,7 @@ l = list(var_a)
 for item in l:
     print(item)
 
+
 dict_value = {
     'name': 'pleuvoir',
     'age': 18
