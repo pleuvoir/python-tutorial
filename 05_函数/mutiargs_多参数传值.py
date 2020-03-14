@@ -25,5 +25,5 @@ def test(a, b, c):
 
 
 if __name__ == '__main__':
-    # mutil_args(1, 2, 3)
+    mutil_args(1, 2, 3)
     add(value=1, a=2, b=3, c=4)

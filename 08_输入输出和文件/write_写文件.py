@@ -19,3 +19,4 @@ with open('readme.md', 'w', encoding='utf-8') as md:
 with open('readme.md', 'a', encoding='utf-8') as md:
     for item in range(3):
         print(item, file=md)
+

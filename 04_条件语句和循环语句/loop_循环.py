@@ -11,7 +11,6 @@ l = list(var_a)
 for item in l:
     print(item)
 
-
 dict_value = {
     'name': 'pleuvoir',
     'age': 18
@@ -42,3 +41,7 @@ while True and count <= 10:
     #     break
 else:
     print('结束了')
+
+# 类似于for循环，有索引的那种
+for index, value in enumerate(var_a):
+    print(index, value)

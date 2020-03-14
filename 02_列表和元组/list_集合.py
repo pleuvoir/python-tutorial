@@ -14,6 +14,12 @@ empty_list1 = []
 empty_list2 = []
 print(empty_list1 == empty_list2)  # True
 
+# 判断列表是不是空
+if not empty_list1:
+    print('is empty')  # 为空
+else:
+    print('is not empty')
+
 """可以直接加两个集合"""
 language_java = ['java']
 language_python = ['python']

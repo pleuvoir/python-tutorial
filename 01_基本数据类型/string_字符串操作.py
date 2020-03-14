@@ -78,7 +78,7 @@ print(join_split)  # ['1', '2', '3']
 # 格式化字符串的几种方式
 print('i come from {}, and my age is {}'.format('china', 18))  # 这种的就像输入日志一样
 print('i come from {1}, and my age is {0}'.format(18, 'china'))  # 可以绑定位置，注意，一定要从0开始，后面的实际值索引和括号内对应
-print('i come from {0:>10}, and my age is {1:<5}'.format('china', 18))  # 这个可以调整位置，请自己尝试
+print('i come from {0:>10}, and my age is {1:<50}'.format('china', 18))  # 这个可以调整位置，请自己尝试
 
 for i in range(1, 3):
     print("{0}的平方={1}，{0}的立方={2}".format(i, i ** 2, i ** 3))
@@ -87,11 +87,15 @@ for i in range(1, 3):
 string1 = "hello "
 string2 = "world! "
 string3 = "pleuvoir"
+string4 = ''
 
 print(string1 + string2)
 print(len(string1 + string2))  # 13
 print("hello " "world! ")
 print(len("hello " "world! "))  # 13
+print('是空吗？', string4 == ' ')  # False
+print('是空吗？', string4 == '')  # True
+print(string1.replace('h', 'a'))
 
 print("he" in string1)  # True
 print(" " in string1)  # True
@@ -108,3 +112,4 @@ print(game.casefold())  # 最后一个是德语 小写为ss
 text = 'abcdEFa'
 print(text.strip('ac'))  # bcdEF
 print(text.strip('fab'))  # cdEF
+print(text.split())  # ['abcdEFa']  注意这里是什么也不传，传 ''的话什么也不返回

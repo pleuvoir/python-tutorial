@@ -20,3 +20,6 @@ log.info('你好啊')
 log.warning('你好啊')
 log.error('你好啊')
 log.critical('你好啊')
+
+
+log.info('你好啊{}'.format('pleuvoir'))

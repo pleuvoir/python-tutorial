@@ -11,3 +11,7 @@ ordered_dict['c'] = 3
 
 for k, v in enumerate(ordered_dict):
     print(k, v)
+
+items = ordered_dict.items()
+for k, v in items:
+    print(k, v)
