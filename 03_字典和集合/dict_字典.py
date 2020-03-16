@@ -34,3 +34,8 @@ print(dict_a)  # {'key2': '2', 'key3': 3}
 
 t = tuple(dict_a)
 print(t)  # ('key2', 'key3')
+
+"""字典解析，KEY=最左边的值，VALUE是最右边循环中的每一个内容"""
+
+dict_list = {item: item for item in range(10)}
+print(dict_list)  # {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9}
