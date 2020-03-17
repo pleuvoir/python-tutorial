@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+import functools
 import random
 import threading
 import time
@@ -16,6 +17,10 @@ def runnable(name):
 
 def call_back(future: Future):
     print(f'我能获取到Future的结果{future.result()}')
+
+
+def enhance_call_back(future: Future, **kwargs):
+    print(f'我能获取到Future的结果{future.result()}，还有其它参数{kwargs}')
 
 
 if __name__ == '__main__':
@@ -37,4 +42,8 @@ if __name__ == '__main__':
     with ThreadPoolExecutor(max_workers=max_worker, thread_name_prefix='test-') as executor:
         for index in range(max_worker):
             f = executor.submit(runnable, name='pleuvoir')
-            f.add_done_callback(call_back)
+            # f.add_done_callback(call_back)
+
+            # 由于add_done_callback只能接受一个参数，所以增强一下
+            partial = functools.partial(enhance_call_back, name='pleuvoir', age=18)
+            f.add_done_callback(partial)

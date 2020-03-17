@@ -7,9 +7,11 @@ class MyException(Exception):
 
 if __name__ == '__main__':
     try:
-        raise MyException
+        raise MyException(RuntimeError, 'heh','wod')
     except Exception as e:
         if isinstance(e, MyException):
+            print(e.args)
+            print(type(e.args))
             print('是自定义异常')
     else:
         print('退出了')  # 没有异常这行会打印
