@@ -14,7 +14,7 @@ def context(user,password
 
 注意最后一个括号的位置
 
-```pyhton
+```python
 user_list = [
     'user1',
     'user2',
