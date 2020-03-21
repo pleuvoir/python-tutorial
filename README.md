@@ -7,9 +7,9 @@
 注意对齐
 
 ```python
-	def context(user,password
-				timeout,command)
-		pass
+def context(user,password
+            timeout,command)
+    pass
 ```
 
 注意最后一个括号的位置
