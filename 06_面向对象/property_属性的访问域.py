@@ -32,6 +32,10 @@ class Account(object):
     def history(self):
         return self.__history
 
+    @history.setter
+    def history(self, history):
+        self.__history = history
+
     """静态方法"""
 
     @staticmethod
@@ -50,3 +54,7 @@ if __name__ == '__main__':
     # 获取历史
     history = account.history  # 因为@property的存在 account.history()会报错了
     print(history)
+
+    # 设置历史
+    account.history = [1, 2, 3]
+    print(account.history)  # [1, 2, 3]

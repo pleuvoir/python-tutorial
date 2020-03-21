@@ -12,6 +12,7 @@ dict_a = {
 print(dict_a)  # {'key1': 1, 'key2': '2'}
 
 print(dict_a.get('key1'))  # 没找到的话，返回None，推荐使用
+print(dict_a.get('exist','unknow'))  # 没找到的话，返回设置的默认值
 print(dict_a['key1'])  # 如果没有的话会报错，不推荐使用
 
 """可以返回所有的key"""

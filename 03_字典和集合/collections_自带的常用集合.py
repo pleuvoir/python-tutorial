@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from collections import OrderedDict
+from collections import namedtuple
 
 # 有序的字典
 ordered_dict = OrderedDict()
@@ -15,3 +16,16 @@ for k, v in enumerate(ordered_dict):
 items = ordered_dict.items()
 for k, v in items:
     print(k, v)
+
+# 带有命名的tuple，提高可读性
+
+student = namedtuple('Student', 'name,id')
+
+students = [
+    student('pleuvoir', 1),
+    student('abama', 2)
+]
+
+for student in students:
+    print('name={}，id={}'.format(student.name, student.id))
+    print('name={}，id={}'.format(student[0], student[1]))
