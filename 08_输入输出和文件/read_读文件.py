@@ -24,3 +24,8 @@ print(need_read)
 with open('binary.ec', 'bw') as bw:
     for item in range(5):
         bw.write(bytes(item))  # 注意转换格式
+
+"""读取图像"""
+with open('WechatIMG1580.jpeg', 'rb') as bw:
+    img_bytes = bw.read()
+    print(img_bytes)
