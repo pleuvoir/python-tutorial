@@ -5,8 +5,8 @@ import base64
 
 import requests
 
-AK = 'X0xlt5vmch3wGvHUbYZF2aTo111'
-SK = 'pA9H7w2hl0F3sUGK9KC5LN9bdmdhzztQ111'
+AK = 'X0xlt5vmch3wGvHUbYZF2aTo'
+SK = 'pA9H7w2hl0F3sUGK9KC5LN9bdmdhzztQ'
 
 
 def get_token(ak, sk):
@@ -40,6 +40,15 @@ def ocr(img_url):
     return r.json()['words_result'][0]['words']
 
 
+def ocr_net_img(img_url):
+    params = {'access_token': TOKEN}
+    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+    data = {'url': img_url}
+    r = requests.post('https://aip.baidubce.com/rest/2.0/ocr/v1/webimage', data=data, params=params, headers=headers)
+    # 该项目只需要一个词
+    print(r.json())  # {'log_id': 8146374314688758727, 'words_result_num': 0, 'words_result': []}
+    return r.json()['words_result'][0]['words']
+
 if __name__ == '__main__':
     IMAGE_URL = 'https://b2c.csair.com/ita/rest/intl/captcha/challenge?type=ac&_=1586253162424'
-    ocr(IMAGE_URL)
+    ocr_net_img(IMAGE_URL)
