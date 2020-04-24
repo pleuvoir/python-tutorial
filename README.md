@@ -96,7 +96,7 @@ print(bool(m))  # True
 if bool(m) == True:  # 现在MyType不为为空时返回True，我们可以按照自己的逻辑进行代码编写了，优化下格式就是 if m
     print('m is not empty')
 
-if m:s
+if m:
     print('m is not empty')
 ```
 
